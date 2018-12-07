@@ -1,0 +1,39 @@
+public class TDTableaux {
+
+    
+    public static void main(String[] args) {
+        
+       int i , j , v = 100000, w = 10000, n=10000 , m  = 10000;
+       
+       do{ System.out.println("Donner le nombre de ligne de M1");
+       n = Readln.unint() ; } while ( n<0 || n>20) ;
+       
+       do{ System.out.println("Donner le nombre de colonnes de M1");
+       m = Readln.unint() ; } while ( m<0 || m>20) ; 
+       int m1[][] = new int[n][m];
+       
+       
+       for(i=0;i<n;i++){System.out.println("Ligne"+(i+1)) ;
+            for(j=0;j<m;j++){ System.out.println("Donnez une valeur"); m1[i][j]=Readln.unint() ; 
+       }} 
+       
+       
+       do{ System.out.println("Donner le nombre de ligne de M2");
+       v = Readln.unint() ; } while ( v<0 || v>20) ;
+       
+       do{ System.out.println("Donner le nombre de colonnes de M2");
+       w = Readln.unint() ; } while ( w<0 || w>20) ;
+       
+       int m2[][] = new int[v][w];
+       
+       
+       for(i=0;i<v;i++){System.out.println("Ligne"+(i+1)) ;
+            for(j=0;j<w;j++){ System.out.println("Donnez une valeur"); m2[i][j]=Readln.unint() ; 
+       }} 
+       
+       
+       if(n==v && m==w){
+           int m3[][] = new int[n][m]; 
+            for(i=0;i<n;i++){for(j=0;j<m;j++){ m3[i][j] = m1[i][j]+m2[i][j] ;
+            System.out.println("Valeure : "+m3[i][j]) ;  }}}
+       else { System.out.println(" Addition impossible") ; }
